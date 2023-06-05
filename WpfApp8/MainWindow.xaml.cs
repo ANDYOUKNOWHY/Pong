@@ -70,7 +70,7 @@ namespace WpfApp8
                     Height = 10,
                     Width = 10,
                     Stroke = Brushes.Black,
-                    StrokeThickness = 1,
+                    StrokeThickness = 2,
                     Fill = brush
                 };
                
@@ -108,7 +108,6 @@ namespace WpfApp8
            
             foreach (Ellipse i in odstranit)
             {
-                
                 MyCanvas.Children.Remove(i);
             }
            
@@ -121,7 +120,19 @@ namespace WpfApp8
             if (score > 20)
             {
                 
+                spawning = 20;
+                rust = 1;
+            }
+            if (score > 40)
+            {
+
                 spawning = 15;
+                rust = 1.2;
+            }
+            if (score > 60)
+            {
+
+                spawning = 12;
                 rust = 1.5;
             }
         }
@@ -145,7 +156,7 @@ namespace WpfApp8
            
             casovacHry.Stop();
           
-            MessageBox.Show("Game Over" + Environment.NewLine + "You Scored: " + score + Environment.NewLine + "Click Ok to play again!", "Moo Says: ");
+            MessageBox.Show("Game Over" + Environment.NewLine + "You Scored: " + score + Environment.NewLine + "Click Ok to play again!", "Results: ");
            
             foreach (var y in MyCanvas.Children.OfType<Ellipse>())
             {
@@ -158,7 +169,7 @@ namespace WpfApp8
                 MyCanvas.Children.Remove(i);
             }
         
-            rust = .6;
+            rust = 0.6;
             spawning = 60;
             topScore = score;
             score = 0;

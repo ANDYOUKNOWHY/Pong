@@ -6,9 +6,9 @@
         xmlns:local="clr-namespace:WpfApp8"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Canvas Name="MyCanvas" MouseLeftButtonDown="ClickOnCanvas" Background="Gray">
-        <Label Name="txtScore" FontSize="20" FontWeight="Bold" Content="Score: 0" />
-        <Label Name="txtLastScore" FontSize="20" FontWeight="Bold" Foreground="Purple" Content="Last Score: 0" Canvas.Left="180" />
-        <Rectangle Stroke="Black" Name="healthBar" Width="350" Fill="Red" Height="27" Canvas.Left="433" Canvas.Top="10" />
+    <Canvas Name="MyCanvas" MouseLeftButtonDown="ClickOnCanvas" Background="#FF3AFFE8">
+        <Label Name="txtScore" FontSize="20" FontWeight="Bold" Content="Score: 0" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="36" />
+        <Label Name="txtLastScore" FontSize="20" FontWeight="Bold" Foreground="Black" Content="Last Score: 0" Canvas.Left="180" />
+        <Rectangle Stroke="Black" StrokeThickness="3" Name="healthBar" Width="345" Fill="Red" Height="27" Canvas.Left="400" Canvas.Top="10" HorizontalAlignment="Left" VerticalAlignment="Center" />
     </Canvas>
 </Window>
